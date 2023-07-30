@@ -1,0 +1,50 @@
+module ndk [system] {
+
+    module log {
+      header "log_proxy.h"
+      export *
+      link "log"
+    }
+
+    module android {
+      header "android.h"
+      export *
+      link "nativehelper"
+      link "nativewindow"
+    }
+
+    module input {
+      header "android_input.h"
+      export *
+    }
+
+    module vulkan {
+      header "vulkan_proxy.h"
+      export *
+      link "vulkan"
+    }
+
+    module EGL {
+        header "egl.h"
+        link "EGL"
+    }
+
+    module GLES {
+        header "gl.h"
+        link "GLESv1_CM"
+    }
+
+    module GLES2 {
+        header "gl2.h"
+        link "GLESv2"
+    }
+    
+    module GLES3 {
+        header "gl3.h"
+        link "GLESv3"
+    }
+
+    link "android"
+
+    export *
+}
