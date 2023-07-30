@@ -9,8 +9,6 @@ module ndk [system] {
     module android {
       header "android.h"
       export *
-      link "nativehelper"
-      link "nativewindow"
     }
 
     module input {
